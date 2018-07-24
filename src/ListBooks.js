@@ -1,6 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import {Book} from './Book'
+import { Link } from 'react-router-dom'
+import { Book } from './Book'
 
 export class ListBooks extends React.Component {
   render() {
