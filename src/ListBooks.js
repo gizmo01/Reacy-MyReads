@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {Book} from './Book'
 
-export class ListBook extends React.Component {
+export class ListBooks extends React.Component {
   render() {
   console.log(this.props.books);
     return (<div className="list-books">
@@ -19,7 +19,10 @@ export class ListBook extends React.Component {
                   .filter(book => book.shelf === "currentlyReading")
                   .map(book =>
                     <li key={book.id}>
-                      <Book book={book} changeShelf={this.props.changeShelf}/>
+                      <Book
+                        book={book}
+                        changeShelf={this.props.changeShelf}
+                        currentShelf={book.shelf}/>
                     </li>)}
               </ol>
             </div>
@@ -32,7 +35,10 @@ export class ListBook extends React.Component {
                   .filter(book => book.shelf === "wantToRead")
                   .map(book =>
                     <li key={book.id}>
-                      <Book book={book} changeShelf={this.props.changeShelf}/>
+                      <Book
+                        book={book}
+                        changeShelf={this.props.changeShelf}
+                        currentShelf={book.shelf}/>
                     </li>)}
               </ol>
             </div>
@@ -45,7 +51,10 @@ export class ListBook extends React.Component {
                   .filter(book => book.shelf === "read")
                   .map(book =>
                     <li key={book.id}>
-                      <Book book={book} changeShelf={this.props.changeShelf}/>
+                      <Book
+                        book={book}
+                        changeShelf={this.props.changeShelf}
+                        currentShelf={book.shelf}/>
                     </li>)}
               </ol>
             </div>
