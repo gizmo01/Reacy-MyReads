@@ -1,14 +1,13 @@
 import React from 'react'
 import * as BooksAPI from './BooksAPI'
 import { Route } from 'react-router-dom'
-import './App.css'
-import { ListBooks } from './ListBooks.js'
+import { ListBooks } from './ListBooks'
 import { SearchBooks } from './SearchBooks'
+import './App.css'
 
 class BooksApp extends React.Component {
   state = {
-      books:[],
-      // query :
+      books:[]
     }
 
   componentDidMount(){

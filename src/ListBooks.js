@@ -4,7 +4,6 @@ import {Book} from './Book'
 
 export class ListBooks extends React.Component {
   render() {
-  console.log(this.props.books);
     return (<div className="list-books">
       <div className="list-books-title">
         <h1>MyReads</h1>

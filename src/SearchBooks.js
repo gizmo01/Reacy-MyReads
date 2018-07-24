@@ -1,7 +1,7 @@
 import React from 'react'
 import * as BooksAPI from './BooksAPI'
-import {Link} from 'react-router-dom'
-import {Book} from './Book'
+import { Link } from 'react-router-dom'
+import {Book } from './Book'
 
 export class SearchBooks extends React.Component {
   state = {
@@ -29,7 +29,6 @@ export class SearchBooks extends React.Component {
       this.setState({searchedBooks : []})
     }
   }
-
 
   render() {
     return (
