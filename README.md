@@ -4,12 +4,11 @@ This is the 7th project required for the completion of  Google-Udacity Front End
 ## Installation
 Follow these steps to install the app on your local machine and to get it started:
 
-* git clone https://github.com/gizmo01/React-MyReads <your-own-project-name>
-* cd <your-own-project-name>
+* git clone https://github.com/gizmo01/React-MyReads
 * Install all the required dependencies with `npm install`
 * Install [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 * Start the development server with `npm start`
-  * Runs the app in the development mode.
+  * This runs the app in the development mode.
   * Open http://localhost:3000 to view it in the browser.
   * The page will reload if you make edits.
   * You will also see any lint errors in the console.
