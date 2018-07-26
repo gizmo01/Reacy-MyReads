@@ -2,7 +2,8 @@ import React from 'react'
 
  export class Book extends React.Component {
    render(){
-     let hasThumbnail = this.props.book.imageLinks ? this.props.book.imageLinks.smallThumbnail : ''
+     const {book} = this.props
+     let hasThumbnail = book.imageLinks ? book.imageLinks.smallThumbnail : ''
      return (
          <div className="book">
            <div className="book-top">
@@ -12,7 +13,7 @@ import React from 'react'
              <div className="book-shelf-changer">
                <select
                  onChange={(event) =>
-                   this.props.changeShelf(this.props.book, event.target.value)
+                   this.props.changeShelf(book, event.target.value)
                  }
                  value={this.props.currentShelf}>
                  <option value="move" disabled="disabled">Move to...</option>
@@ -23,9 +24,9 @@ import React from 'react'
                </select>
              </div>
            </div>
-           <div className="book-title">{this.props.book.title}</div>
+           <div className="book-title">{book.title}</div>
            <div className="book-authors">
-             {this.props.book.authors ? this.props.book.authors.join(' - ') : 'No author available'}</div> 
+             {book.authors ? book.authors.join(' - ') : 'No author available'}</div>
          </div>
      );
    }

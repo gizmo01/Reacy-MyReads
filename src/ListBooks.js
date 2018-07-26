@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { BookShelf } from './BookShelf'
 
-export class ListBooks extends React.Component {
-  render() {
+// transformed into functional stateless component
+export const ListBooks = (props) => {
     return (
       <div className="list-books">
         <div className="list-books-title">
@@ -11,20 +11,20 @@ export class ListBooks extends React.Component {
         </div>
         <div className="list-books-content">
           <BookShelf
-            books={this.props.books}
-            changeShelf={this.changeShelf}
+            books={props.books}
+            changeShelf={props.changeShelf}
             title="Currently Reading"
             shelf="currentlyReading"
           />
           <BookShelf
-            books={this.props.books}
-            changeShelf={this.changeShelf}
+            books={props.books}
+            changeShelf={props.changeShelf}
             title="Want to Read"
             shelf="wantToRead"
           />
           <BookShelf
-            books={this.props.books}
-            changeShelf={this.changeShelf}
+            books={props.books}
+            changeShelf={props.changeShelf}
             title="Read"
             shelf="read"
           />
@@ -34,4 +34,3 @@ export class ListBooks extends React.Component {
       </div>
     </div>)
   }
-};
